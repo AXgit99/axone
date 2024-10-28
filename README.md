@@ -14,19 +14,13 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.profile
 source .profile
 ```
 
-Node Installation
-
-Node Name
-
-Your Node Name
-Port prefix
-
-176
-# Clone project repository
+**Clone project repository**
+```
 cd && rm -rf axoned
 git clone https://github.com/axone-protocol/axoned
 cd axoned
 git checkout v10.0.0
+```
 
 # Build binary
 make install
