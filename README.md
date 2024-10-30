@@ -22,8 +22,10 @@ cd axoned
 git checkout v10.0.0
 ```
 
-# Build binary
+**Build binary**
+```
 make install
+```
 
 # Prepare cosmovisor directories
 mkdir -p $HOME/.axoned/cosmovisor/genesis/bin
