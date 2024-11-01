@@ -27,9 +27,11 @@ git checkout v10.0.0
 make install
 ```
 
-# Prepare cosmovisor directories
+**Prepare cosmovisor directories**
+```
 mkdir -p $HOME/.axoned/cosmovisor/genesis/bin
 ln -s $HOME/.axoned/cosmovisor/genesis $HOME/.axoned/cosmovisor/current -f
+```
 
 # Copy binary to cosmovisor directory
 cp $(which axoned) $HOME/.axoned/cosmovisor/genesis/bin
