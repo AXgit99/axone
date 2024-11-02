@@ -33,13 +33,16 @@ mkdir -p $HOME/.axoned/cosmovisor/genesis/bin
 ln -s $HOME/.axoned/cosmovisor/genesis $HOME/.axoned/cosmovisor/current -f
 ```
 
-# Copy binary to cosmovisor directory
+**Copy binary to cosmovisor directory**
+
 cp $(which axoned) $HOME/.axoned/cosmovisor/genesis/bin
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 axoned config chain-id axone-dentrite-1
 axoned config keyring-backend test
 axoned config node tcp://localhost:17657
+```
 
 # Initialize the node
 axoned init "Your Node Name" --chain-id axone-dentrite-1
