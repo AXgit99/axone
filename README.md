@@ -44,8 +44,10 @@ axoned config keyring-backend test
 axoned config node tcp://localhost:17657
 ```
 
-# Initialize the node
+**Initialize the node**
+```
 axoned init "Your Node Name" --chain-id axone-dentrite-1
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots-testnet.nodejumper.io/axone/genesis.json > $HOME/.axoned/config/genesis.json
