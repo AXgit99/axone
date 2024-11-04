@@ -49,9 +49,11 @@ axoned config node tcp://localhost:17657
 axoned init "Your Node Name" --chain-id axone-dentrite-1
 ```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
+```
 curl -L https://snapshots-testnet.nodejumper.io/axone/genesis.json > $HOME/.axoned/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/axone/addrbook.json > $HOME/.axoned/config/addrbook.json
+```
 
 # Set seeds
 sed -i -e 's|^seeds *=.*|seeds = "3f472746f46493309650e5a033076689996c8881@axone-testnet.rpc.kjnodes.com:13659"|' $HOME/.axoned/config/config.toml
