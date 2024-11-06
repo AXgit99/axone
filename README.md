@@ -60,8 +60,10 @@ curl -L https://snapshots-testnet.nodejumper.io/axone/addrbook.json > $HOME/.axo
 sed -i -e 's|^seeds *=.*|seeds = "3f472746f46493309650e5a033076689996c8881@axone-testnet.rpc.kjnodes.com:13659"|' $HOME/.axoned/config/config.toml
 ```
 
-# Set minimum gas price
+**Set minimum gas price**
+```
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001uaxone"|' $HOME/.axoned/config/app.toml
+```
 
 # Set pruning
 sed -i \
