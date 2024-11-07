@@ -65,12 +65,14 @@ sed -i -e 's|^seeds *=.*|seeds = "3f472746f46493309650e5a033076689996c8881@axone
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001uaxone"|' $HOME/.axoned/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.axoned/config/app.toml
+```
 
 # Enable prometheus
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.axoned/config/config.toml
