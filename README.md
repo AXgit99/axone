@@ -74,8 +74,10 @@ sed -i \
   $HOME/.axoned/config/app.toml
 ```
 
-# Enable prometheus
+**Enable prometheus**
+```
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.axoned/config/config.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:17617%; s%:8080%:17680%; s%:9090%:17690%; s%:9091%:17691%; s%:8545%:17645%; s%:8546%:17646%; s%:6065%:17665%" $HOME/.axoned/config/app.toml
