@@ -79,9 +79,11 @@ sed -i \
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.axoned/config/config.toml
 ```
 
-# Change ports
+**Change ports**
+```
 sed -i -e "s%:1317%:17617%; s%:8080%:17680%; s%:9090%:17690%; s%:9091%:17691%; s%:8545%:17645%; s%:8546%:17646%; s%:6065%:17665%" $HOME/.axoned/config/app.toml
 sed -i -e "s%:26658%:17658%; s%:26657%:17657%; s%:6060%:17660%; s%:26656%:17656%; s%:26660%:17661%" $HOME/.axoned/config/config.toml
+```
 
 # Download latest chain data snapshot
 curl "https://snapshots-testnet.nodejumper.io/axone/axone_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.axoned"
