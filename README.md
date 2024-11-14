@@ -85,8 +85,10 @@ sed -i -e "s%:1317%:17617%; s%:8080%:17680%; s%:9090%:17690%; s%:9091%:17691%; s
 sed -i -e "s%:26658%:17658%; s%:26657%:17657%; s%:6060%:17660%; s%:26656%:17656%; s%:26660%:17661%" $HOME/.axoned/config/config.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots-testnet.nodejumper.io/axone/axone_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.axoned"
+```
 
 # Install Cosmovisor
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
