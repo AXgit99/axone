@@ -90,8 +90,10 @@ sed -i -e "s%:26658%:17658%; s%:26657%:17657%; s%:6060%:17660%; s%:26656%:17656%
 curl "https://snapshots-testnet.nodejumper.io/axone/axone_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.axoned"
 ```
 
-# Install Cosmovisor
+**Install Cosmovisor**
+```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
+```
 
 # Create a service
 sudo tee /etc/systemd/system/axone.service > /dev/null << EOF
