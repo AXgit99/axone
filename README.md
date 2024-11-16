@@ -95,7 +95,8 @@ curl "https://snapshots-testnet.nodejumper.io/axone/axone_latest.tar.lz4" | lz4 
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/axone.service > /dev/null << EOF
 [Unit]
 Description=Axone node service
@@ -116,6 +117,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable axone.service
+```
 
 **Start the service and check the logs**
 ```
